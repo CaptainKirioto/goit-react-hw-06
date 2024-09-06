@@ -34,9 +34,9 @@ function App() {
 
   /* ----- ADDING CONTACTS ----- */
 
-  const addContact = (newContact) => {
-    setContacts((prevContacts) => [...prevContacts, newContact]);
-  };
+  // const addContact = (newContact) => {
+  //   setContacts((prevContacts) => [...prevContacts, newContact]);
+  // };
 
   /* ----- DELETING CONTACTS ----- */
 
@@ -56,7 +56,8 @@ function App() {
   return (
     <div className={s.wrapper}>
       <h1 className={s.title}>Phonebook</h1>
-      <ContactForm addContact={addContact} />
+      {/* <ContactForm addContact={addContact} /> */}
+      <ContactForm />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={filteredContacts} handleDelete={handleDelete} />
     </div>
