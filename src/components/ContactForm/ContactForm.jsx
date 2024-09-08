@@ -5,8 +5,6 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsSlice";
 
-// { addContact }
-
 const ContactForm = () => {
   const initialValues = {
     name: "",

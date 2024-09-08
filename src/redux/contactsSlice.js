@@ -18,14 +18,14 @@ const slice = createSlice({
       console.log(action.payload);
     },
     deleteContact(state, action) {
-      state.contacts = state.items.fliter((item) => item.id !== action.payload);
+      state.items = state.items.filter((item) => item.id !== action.payload);
     },
   },
 });
 
 export const { addContact, deleteContact } = slice.actions;
-export const selectedContacts = (state) => state.contacts.items;
-export default slice.reducer;
+export const selectContacts = (state) => state.contacts.items;
+export const contactsReducer = slice.reducer;
 
 // export const addContact = createAction("contacts/addContact");
 // export const deleteContact = createAction("contacts/deleteContact");
